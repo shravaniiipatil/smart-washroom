@@ -1,0 +1,38 @@
+int buzzer = 2;             // the pin that the Buzzer is attached to
+int sensor = 7;            // the pin that the sensor is attached to
+int state = LOW;           // by default, no motion detected
+int val = 0;                // variable to store the sensor status
+unsigned long int Time = 0;
+int Switch = 11;            // the pin that the Switch is attached to
+
+void setup()
+{
+  pinMode(buzzer, OUTPUT);      // initialize buzzer as an output
+  pinMode(sensor, INPUT);      // initialize sensor as an input
+  pinMode(Switch, INPUT_PULLUP);
+  Serial.begin(9600);          // initialize serial
+  digitalWrite(buzzer, LOW);    // Buzzer turn OFF 
+}
+
+void loop()
+{
+  val = digitalRead(sensor);                 // read sensor value
+  if (val == HIGH)                          // check if the sensor is HIGH
+  {        
+     Time=millis();                          // update the time when motion detected
+  }
+  if( ( millis()-Time ) >  600000)             //if motion is not detected for more than 10 minutes
+  {
+    digitalWrite(buzzer, HIGH);              // Buzzer turn ON
+     Serial.println("Threshold........");    
+     Time=millis();
+}
+  if(digitalRead(Switch)==LOW)                    // if Switch gets pressed
+  {
+       delay(100);
+       digitalWrite(buzzer, LOW);                       // Buzzer turn OFF
+       Serial.println("Buzzer stopped.........");
+       Time=millis();                                  //update the time when motion detected
+       delay(1000);
+  }
+}
