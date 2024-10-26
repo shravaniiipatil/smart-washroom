@@ -11,9 +11,9 @@ Many time we heard that someone’s relative went to washroom / bathroom in the 
 
 # EXPLANATION🫀
 
-	1. The project's primary objective is to ensure the safety of senior citizens who are prone to heart attacks. The system activates when the senior citizen enters the bathroom.
-	2. If there is no movement detected for 10 minutes, the system triggers a loud alarm. This feature serves as a safety net to call for immediate assistance in case of a health emergency, such as a heart attack.
-	3. If person in was still due to other reason for 10 mins and if he/she came to know alarm is ringing then he/ she can immediately stop the alarm by pressing internal switch indicating that there is no any hurdle.   
+1. The project's primary objective is to ensure the safety of senior citizens who are prone to heart attacks. The system activates when the senior citizen enters the bathroom.
+2. If there is no movement detected for 10 minutes, the system triggers a loud alarm. This feature serves as a safety net to call for immediate assistance in case of a health emergency, such as a heart attack.
+3. If person in was still due to other reason for 10 mins and if he/she came to know alarm is ringing then he/ she can immediately stop the alarm by pressing internal switch indicating that there is no any hurdle.   
 
 # CONCLUSION💡 
 
